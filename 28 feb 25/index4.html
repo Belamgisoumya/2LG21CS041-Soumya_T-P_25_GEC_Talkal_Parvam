@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Indian Space Research Organisation (ISRO) </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 5px;
+  text-align: center;
+  background: #56aec9;
+  color: white;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #195286;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #195286;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #56aec9;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: #195286;
+  padding: 10px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background:  #195286;
+.flex-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: ;
+  padding:15px;
+  background-color: #195286;
+  box-shadow: 0px 4px 6px;
+}
+
+.flex-container > div {
+  background-color: white;
+  width: 100px;
+  margin: 10px;
+  border-radius: 15px;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Note -->
+<div style="background:rgb(10, 51, 104);padding:5px">
+  <h4 style="text-align:center"><img src="isromainBanner_nspd.png" alt="isro" width="100%" height="100px"></h4>
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  
+  <a href="https://www.isro.gov.in/index.html"style="flex-grow:0.5;">HOME</a>
+  <a href="https://www.isro.gov.in/index.html#"style="flex-grow:0.5;">ABOUT US</a>
+  <a href="https://www.isro.gov.in/index.html#"style="flex-grow:0.5;">ACTIVITES</a>
+  <a href="https://www.isro.gov.in/index.html#"style="flex-grow:0.5;">SERVICES</a>
+  <a href="https://www.isro.gov.in/index.html#"style="flex-grow:0.5;">PROGRAMMES</a>
+  <a href="https://www.isro.gov.in/index.html#"style="flex-grow:0.5;">RESOURCES</a>
+  <a href="https://www.isro.gov.in/index.html#"style="flex-grow:0.5;">ENGAGEMENTS</a>
+</div>
+<!-- Header -->
+<div class="header">
+  <video width="100%" height="100%" controls>
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.ogg" type="video/ogg">
+</video>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <h2>Former Secretaries / Chairman</h2>
+    <img src="Former Secretaries  Chairman.jpeg" width="100%" height="300px">
+    <p>The Chairman of the Indian Space Research Organisation is the statutory head of the Indian Space Research Organisation (ISRO). The officeholder is a secretary to the Government of India and an executive of the Department of Space (DOS) which directly reports to the Prime Minister of India.</p>
+    <h3>Recent Updates</h3>
+    <img src="gslvf15_rec.png" width="100%" height="300px">
+    <p style="text-align: center;">GSLV-F15 / NVS-02 MISSION<br>
+      Launched on: January 29, 2025<br></p>
+      <img src="spadex_rec.png.webp" width="100%" height="300px">
+    <p style="text-align: center;">PSLV C60/SPADEX Mission<br>
+      Launched on: December 30, 2024<br></p>
+      <img src="pslv_c59_rec.png.webp"" width="100%" height="300px">
+      <p style="text-align: center;">PSLV-C59/PROBA-3 Mission
+        Launched on: December 05, 2024<br></p>
+      
+    
+  </div>
+  <div class="main">
+    <h2 style="color:rgb(7, 13, 20);">HIGHLIGHT</h2>
+    <h5 style= "font-size:20px;">ISRO Academic Day-2024</h5>
+    <img src="Respond_Basket_2024_Highlights.png.webp" width="100%" height="300px">
+    <p>The ISRO Academia Day 2024 was held on December 10, 2024 at the Indian Institute of Space Science and Technology (IIST) in Thiruvananthapuram. The event was organized to strengthen collaboration between ISRO and academia</p>
+    <br>
+    <h5 style= "font-size:20px;">ISRO robotics challenge -URSC(IRoC-U)2025</h5>
+    <img src="IRoC-U_2025high.png.webp" width="100%" height="300px">
+
+    <h2>ISRO Portals</h2>
+    <img src="ISRO Portals.jpeg" width="100%" height="300px">
+    <h2> Autonomous bodies</h2>
+    <img src="bodies.png" width="100%" height="300px">
+
+
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>Useful links</h2>
+<div class="flex-container">
+  <div  style="flex-basis:500px" style="flex-grow:1; color:black;font-weight:bold";>Related Links</div>
+  <div style="flex-basis:500px" style="flex-grow:1">Government Portal</div>
+  <div style="flex-basis:500px" style="flex-grow:1">Reports</div>
+  <div style="flex-basis:500px" style="flex-grow:1">Policies</div>
+  
+</div>
+</body>
+</html>
