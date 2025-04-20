@@ -30,7 +30,6 @@ public class StaffController {
         model.addAttribute("staff", new Staff());
         return "staff/create";
     }
-
     @PostMapping("/save")
     public String saveStaff(@ModelAttribute Staff stu) {
         staffService.saveStaff(stu);
