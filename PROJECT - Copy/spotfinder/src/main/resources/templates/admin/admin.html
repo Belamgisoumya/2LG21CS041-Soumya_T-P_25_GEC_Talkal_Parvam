@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="min-h-screen flex items-center justify-center" style="background: linear-gradient(135deg, #ed6808 0%, #3b1877 100%)">
+    <div class="bg-gray-100 rounded-lg w-80 p-8 shadow-md">
+      <h2 class="text-center font-bold text-xl mb-8">Login</h2>
+      <form class="space-y-6">
+        <input
+          type="email"
+          placeholder="Email"
+          class="w-full border-b border-gray-400 bg-transparent py-2 text-gray-500 placeholder-gray-400 focus:outline-none focus:border-gray-600"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          class="w-full border-b border-gray-400 bg-transparent py-2 text-gray-500 placeholder-gray-400 focus:outline-none focus:border-gray-600"
+        />
+        <button
+          type="submit"
+          class="w-full py-2 text-white font-normal rounded bg-gradient-to-r from-blue-500 to-purple-700"
+        >
+       <a href="/dashboard">Login</a>
+        </button>
+      </form>
+      <div class="mt-8 text-center text-gray-600 text-sm space-y-2">
+        <p>
+          Forgot <a href="/recover-password" class="font-semibold text-blue-700">Password</a>?
+        </p>
+        <p>
+          Don't have an account?
+          <a href="/sign" class="font-semibold text-blue-700">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

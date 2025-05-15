@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book your Slot</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="w-50">
+            <h1 class="mt-5 text-center">Book your slot</h1>
+            <form th:action="@{/soumya/save}" th:object="${confirmation}" method="post" class="mt-3">
+                <div class="form-group">
+                    <label for="confirmationName">Name:</label>
+                    <input type="text" class="form-control" id="confirmationName" th:field="*{name}"
+                        placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="confirmationvehiclenumber">Vehicle Number:</label>
+                    <input type="text" class="form-control" id="confirmationVehiclenumber" th:field="*{vehiclenumber}"
+                        placeholder="Enter Vehicle number">
+                </div>
+                <div class="form-group">
+                    <label for="vehicle type">Vehicle type:</label><br>
+                    <select id="vehicle type" name=" select vehicle type">
+                        <option value=""></option>
+                        <option value="2 Wheeler">2 Wheeler</option>
+                        <option value="4 Wheeler">4 Wheeler</option>
+                    </select><br>
+                </div>
+                <div class="form-group">
+                    <label for="select your area">Select your area:</label><br>
+                    <select id="select your area" name="select your area">
+                        <option value=""></option>
+                        <option value="K R Circle">K R Circle</option>
+                        <option value="Harding  Circle">Harding  Circle</option>
+                        <option value="Devraj urs Road">Devraj urs Road</option>
+                    </select><br>
+                </div>
+                <div class="form-group">
+                    <label for="select your slot">Select your slot:</label><br>
+                    <select id="select your slot" name="select your slot">
+                        <option value=""></option>
+                        <option value="W1">W1</option>
+                        <option value="W2">W2</option>
+                        <option value="W3">W3</option>
+                        <option value="W4">W4</option>
+                        <option value="X1">X1</option>
+                        <option value="X2">X2</option>
+                        <option value="X3">X3</option>
+                        <option value="X4">X4</option>
+                        <option value="Y1">Y1</option>
+                        <option value="Y2">Y2</option>
+                        <option value="Y3">Y3</option>
+                        <option value="Y4">Y4</option>
+                        <option value="Z1">Z1</option>
+                        <option value="Z2">Z2</option>
+                        <option value="Z3">Z3</option>
+                        <option value="Z4">Z4</option>
+                    </select><br>
+                </div>
+                <div>
+                    <label for="booking date">Booking date</label>
+                    <input type="date" class="form-control" id="confirmationbookingdate" th:field="*{booking date}"
+                        placeholder="Booking date">
+                </div><br>
+                <div>
+                    <label for="Check-in time">Check-in time</label>
+                    <input type="time" class="form-control" id="confirmationcheckintime" th:field="*{Check-in time}"
+                        placeholder="Check-in time">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

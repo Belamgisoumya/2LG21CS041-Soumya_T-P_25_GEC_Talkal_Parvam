@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book Parking Slot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .input-field {
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            padding: 7px 10px;
+            transition: all 0.3s;
+        }
+        .input-field:focus {
+            border-color: #fd7201;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+        .submit-btn {
+            background-color: #fd7201;
+            transition: all 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #fd7201;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex items-center justify-center p-4">
+        <div class="form-container w-full max-w-md p-8">
+            <h1 class="text-center text-3xl font-bold text-gray-800 mb-8">BOOK YOUR SLOT</h1>
+
+            <form th:action="@{/soumya/save}" th:object="${confirmation}" method="post">
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter your name"
+                        class="input-field w-full"
+                        required
+                    />
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">Vehicle Number</label>
+                    <input
+                        type="text"
+                        name="vehicleNumber"
+                        placeholder="Enter vehicle number"
+                        class="input-field w-full"
+                        required
+                    />
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">Vehicle Type</label>
+                    <select
+                        name="VehicleType"
+                        class="input-field w-full"
+                        required
+                    >
+                        <option value="">Select Vehicle Type</option>
+                        <option value="2 Wheeler">2 Wheeler</option>
+                        <option value="4 Wheeler">4 Wheeler</option>
+                    </select>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">Area</label>
+                    <select
+                        name="Area"
+                        class="input-field w-full"
+                        required
+                    >
+                        <option value="">Select Your Area</option>
+                        <option value="Lulu Mall">Lulu Mall</option>
+                        <option value="UB Mall">UB Mall</option>
+                        <option value="Orion Mall">Orion Mall</option>
+                    </select>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">Slot</label>
+                    <select
+                        name="slot"
+                        class="input-field w-full"
+                        required
+                    >
+                        <option value="">Select Your Slot</option>
+                        <option value="A1">A1</option>
+                        <option value="A2">A2</option>
+                        <option value="A3">A3</option>
+                        <option value="A4">A4</option>
+                        <option value="B1">B1</option>
+                        <option value="B2">B2</option>
+                        <option value="B3">B3</option>
+                        <option value="B4">B4</option>
+                        <option value="C1">C1</option>
+                        <option value="C2">C2</option>
+                        <option value="C3">C3</option>
+                        <option value="C4">C4</option>
+                        <option value="D1">D1</option>
+                        <option value="D2">D2</option>
+                        <option value="D3">D3</option>
+                        <option value="D4">D4</option>
+                    </select>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">Booking Date</label>
+                    <input
+                        type="date"
+                        name="bookingDate"
+                        class="input-field w-full"
+                        required
+                    />
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">Check-in Time</label>
+                    <input
+                        type="time"
+                        name="CheckinTime"
+                        class="input-field w-full"
+                        required
+                    />
+                </div>
+                <div class="mt-8">
+                    <button
+                        type="submit"
+                        class="submit-btn w-full py-3 rounded-lg text-white font-semibold text-lg"
+                    >
+                        Confirm Booking
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
